@@ -5,12 +5,12 @@ def cifra_cesar(texto, deslocamento):
             base=ord('A') if letra.isupper() else ord('a')
             codigo = (ord(letra) - base + deslocamento) % 26 + base
             palavraFinal += chr(codigo) 
-    else:
-        palavraFinal += letra 
-        return palavraFinal
+        else:
+            palavraFinal += letra 
+    return palavraFinal
             
 mensagem = input("Digite a mensagem a ser criptografada:")
-chave = 3 * 6
+chave = 3 * 2
         
 mensagem_cifrada = cifra_cesar(mensagem, chave)
 print("Mensagem criptografada: ", mensagem_cifrada)
