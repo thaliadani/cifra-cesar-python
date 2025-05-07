@@ -1,5 +1,13 @@
-opcoes = input("Escolha uma das opcoes: 1-Criptografar 2-Descriptografar")
-chave = 3 * 2
+from colorama import Fore, Style, init
+init(autoreset=True) 
+
+opcoes = input(Fore.GREEN + "\n""======================= \n" 
+    "Escolha uma das opções:\n \n "
+    "1 - Criptografar \n "
+    "2 - Descriptografar \n"
+    "======================= \n"+ Style.RESET_ALL)
+
+chave =  8 - (3 * 2)
 
 def texto_criptografar(texto, deslocamento):
     palavraFinal = ""
@@ -25,7 +33,6 @@ elif opcoes == "2":
     print("Mensagem descriptografada: ", mensagem_cifrada)
 else:
     print("Opção inválida")      
-
 
         
 
